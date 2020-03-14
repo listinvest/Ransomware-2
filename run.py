@@ -20,13 +20,13 @@ def main():
 					print(fn + " missed")
 					missed += 1
 				else:
-					print(fn + " blocked (" + str(round((blocked/total) * 100, 2)) + ")")
+					print(fn + " blocked (" + str(round(((total - missed)/total) * 100, 2)) + "%)")
 					blocked += 1
 			except:
-				print(fn + " blocked (" + str(round((blocked/total) * 100, 2)) + ")")
+				print(fn + " blocked (" + str(round(((total - missed)/total) * 100, 2)) + "%)")
 				blocked += 1
 				pass
-		print("Results:\nBlocked: " + str(blocked) + "\nMissed: " + str(missed) + "\nDetection Score: " + str(round((blocked/total) * 100, 2)) + "%.")
+		print("Results:\nBlocked: " + str(blocked) + "\nMissed: " + str(missed) + "\nDetection Score: " + str(round(((total - missed)/total) * 100, 2)) + "%.")
 	else:
 		return
 main();
