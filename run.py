@@ -17,7 +17,6 @@ def main():
 				current += 1
 				p = subprocess.Popen([fn])
 				result = p.wait()
-				print(result)
 				if result == 1:
 					print("(" + str(current) + "/" + str(total) + ") " + fn + " missed")
 					missed += 1
