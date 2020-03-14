@@ -8,9 +8,9 @@ def main():
 		for fn in glob.glob("*.RANSOM"):
 			print("Renaming " + fn + " to " + fn + ".exe")
 			os.rename(fn, fn + '.exe')
-		print("Running " + str(total) + " samples.")
-		
+			
 		total = len(glob.glob("*.exe"))
+		print("Running " + str(total) + " samples.")
 		for fn in glob.glob("*.exe"):
 			try:
 				p = subprocess.Popen([fn])
