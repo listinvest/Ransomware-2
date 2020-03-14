@@ -28,7 +28,7 @@ def main():
 				print("(" + current + "/" + total + ") " + fn + " blocked (" + str(round(((total - missed)/total) * 100, 2)) + "%)")
 				blocked += 1
 				pass
-		print("Results:\nBlocked: " + str(blocked) + "\nMissed: " + str(missed) + "\nDetection Score: " + str(round(((total - missed)/total) * 100, 2)) + "%.")
+		print("\n\nResults:\n    Blocked: " + str(blocked) + "\n    Missed: " + str(missed) + "\n    Detection Score: " + str(round(((total - missed)/total) * 100, 2)) + "%.")
 	else:
 		return
 main();
