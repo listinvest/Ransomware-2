@@ -3,12 +3,13 @@ def main():
 	start = str(input("This will run all of the ransomware in this folder! If you are not in a safe environment do not run this script.\nAre you ready to proceed? (yes/no) "))
 	blocked = 0
 	missed = 0
+	total = len(glob.glob("*.exe"))
 	
 	if start == "yes":
 		for fn in glob.glob("*.RANSOM"):
 			print("Renaming " + fn + " to " + fn + ".exe")
 			os.rename(fn, fn + '.exe')
-		print("Running " + str(len(glob.glob("*.exe"))) + " samples.")
+		print("Running " + str(total) + " samples.")
 			
 		for fn in glob.glob("*.exe"):
 			try:
