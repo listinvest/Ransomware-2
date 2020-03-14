@@ -18,6 +18,8 @@ We do not hold any liability of any possible damages caused by a ransomware file
 
 When an update is released you can simply do `git pull`.
 
+To run all files you can use `py run.py`
+
 ## Organisation
 Executable files are located in the root repository folder.
 
