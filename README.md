@@ -17,3 +17,8 @@ We do not hold any liability of any possible damages caused by a ransomware file
 `git clone https://github.com/FozzieHi/Ransomware.git`
 
 When an update is released you can simply do `git pull`.
+
+## Organisation
+Executable files are located in the root repository folder.
+
+JavaScript files are located in the `js` folder.
