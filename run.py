@@ -12,18 +12,20 @@ def main():
 		total = len(glob.glob("*.exe"))
 		print("Running " + str(total) + " samples.")
 		for fn in glob.glob("*.exe"):
+			current = 0
 			try:
+				current += 1
 				p = subprocess.Popen([fn])
 				result = p.wait()
 				print(result)
 				if result == 1:
-					print(fn + " missed")
+					print("(" + current + "/" + total + ") " + fn + " missed")
 					missed += 1
 				else:
-					print(fn + " blocked (" + str(round(((total - missed)/total) * 100, 2)) + "%)")
+					print("(" + current + "/" + total + ") " + fn + " blocked (" + str(round(((total - missed)/total) * 100, 2)) + "%)")
 					blocked += 1
 			except:
-				print(fn + " blocked (" + str(round(((total - missed)/total) * 100, 2)) + "%)")
+				print("(" + current + "/" + total + ") " + fn + " blocked (" + str(round(((total - missed)/total) * 100, 2)) + "%)")
 				blocked += 1
 				pass
 		print("Results:\nBlocked: " + str(blocked) + "\nMissed: " + str(missed) + "\nDetection Score: " + str(round(((total - missed)/total) * 100, 2)) + "%.")
