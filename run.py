@@ -18,11 +18,11 @@ def main():
 				p = subprocess.Popen([fn])
 				result = p.wait()
 				if result == 1:
-					print("(" + str(current) + "/" + str(total) + ") " + fn + " missed (" + str(round(((total - missed)/total) * 100, 2)) + "%)")
 					missed += 1
+					print("(" + str(current) + "/" + str(total) + ") " + fn + " missed (" + str(round(((total - missed)/total) * 100, 2)) + "%)")
 				else:
-					print("(" + str(current) + "/" + str(total) + ") " + fn + " blocked (" + str(round(((total - missed)/total) * 100, 2)) + "%)")
 					blocked += 1
+					print("(" + str(current) + "/" + str(total) + ") " + fn + " blocked (" + str(round(((total - missed)/total) * 100, 2)) + "%)")
 			except:
 				print("(" + str(current) + "/" + str(total) + ") " + fn + " blocked (" + str(round(((total - missed)/total) * 100, 2)) + "%)")
 				blocked += 1
