@@ -19,13 +19,13 @@ def main():
 				result = p.wait()
 				print(result)
 				if result == 1:
-					print("(" + current + "/" + total + ") " + fn + " missed")
+					print("(" + str(current) + "/" + str(total) + ") " + fn + " missed")
 					missed += 1
 				else:
-					print("(" + current + "/" + total + ") " + fn + " blocked (" + str(round(((total - missed)/total) * 100, 2)) + "%)")
+					print("(" + str(current) + "/" + str(total) + ") " + fn + " blocked (" + str(round(((total - missed)/total) * 100, 2)) + "%)")
 					blocked += 1
 			except:
-				print("(" + current + "/" + total + ") " + fn + " blocked (" + str(round(((total - missed)/total) * 100, 2)) + "%)")
+				print("(" + str(current) + "/" + str(total) + ") " + fn + " blocked (" + str(round(((total - missed)/total) * 100, 2)) + "%)")
 				blocked += 1
 				pass
 		print("\n\nResults:\n    Blocked: " + str(blocked) + "\n    Missed: " + str(missed) + "\n    Detection Score: " + str(round(((total - missed)/total) * 100, 2)) + "%.")
