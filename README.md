@@ -1,5 +1,5 @@
 # Ransomware
-A repository of live ransomware - do not run these if you don't know what you're doing!
+A repository of live ransomware samples - do not run these if you don't know what you're doing!
 
 ## Disclaimer
 The purpose of this repository is to provide easy access of ransomware samples to researchers.
