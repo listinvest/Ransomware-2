@@ -18,7 +18,10 @@ We do not hold any liability of any possible damages caused by a ransomware file
 
 When an update is released you can simply do `git pull`.
 
-To run all files you can use `py run.py`
+## Script
+There is a script to run all ransomware samples within the folder.
+This is ran using `py run.py`
+![Script example](https://i.fozzie.dev/c4vuUJ994wAJZJpA/vritPs6Z7pn9DTNu.png)
 
 ## Organisation
 Executable files are located in the root repository folder.
