@@ -16,7 +16,7 @@ def main():
 				print("Renamed " + fn + " to " + fn + ".exe")
 			except:
 				blocked += 1
-				print("Rename (" + str(current) + "/" + str(total) + ") " + fn + " blocked (" + str(round(((total - missed)/total) * 100, 2)) + "%)")
+				print("Rename (" + ("0" if current < 10 else "") + str(current) + "/" + str(total) + ") " + fn + " blocked (" + str(round(((total - missed)/total) * 100, 2)) + "%)")
 				pass
 		print("--------------------------------------------------------------")
 		if (len(glob.glob("*.exe")) == 0):
@@ -37,10 +37,10 @@ def main():
 					result = p.wait()
 					if result == 1:
 						missed += 1
-						print("(" + str(current) + "/" + str(total) + ") " + fn + " missed (" + str(round(((total - missed)/total) * 100, 2)) + "%)")
+						print("(" + ("0" if current < 10 else "") + str(current) + "/" + str(total) + ") " + fn + " missed (" + str(round(((total - missed)/total) * 100, 2)) + "%)")
 					else:
 						blocked += 1
-						print("(" + str(current) + "/" + str(total) + ") " + fn + " blocked (" + str(round(((total - missed)/total) * 100, 2)) + "%)")
+						print("(" + ("0" if current < 10 else "") + str(current) + "/" + str(total) + ") " + fn + " blocked (" + str(round(((total - missed)/total) * 100, 2)) + "%)")
 				except:
 					blocked += 1
 					print("(" + str(current) + "/" + str(total) + ") " + fn + " blocked (" + str(round(((total - missed)/total) * 100, 2)) + "%)")
